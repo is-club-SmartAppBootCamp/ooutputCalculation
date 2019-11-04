@@ -21,16 +21,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Button"
+        android:text="計算結果"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/operator_spinner"
         android:layout_width="106dp"
         android:layout_height="41dp"
         android:layout_marginBottom="52dp"
+        android:entries="@array/operation_symbols"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -44,9 +45,9 @@
         android:layout_marginBottom="52dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="値"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/spinner2" />
+        app:layout_constraintEnd_toStartOf="@+id/operator_spinner" />
 
     <EditText
         android:id="@+id/editText3"
@@ -56,8 +57,8 @@
         android:layout_marginBottom="52dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="値"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/spinner2" />
+        app:layout_constraintStart_toEndOf="@+id/operator_spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

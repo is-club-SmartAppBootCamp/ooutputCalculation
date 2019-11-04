@@ -1,6 +1,7 @@
+package com.example.outputcalculation
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.outputcalculation.R
 
 class MainActivity : AppCompatActivity() {
 
