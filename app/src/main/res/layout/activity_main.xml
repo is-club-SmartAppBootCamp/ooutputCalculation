@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/resultTextView"
         android:layout_width="107dp"
         android:layout_height="38dp"
         android:text="計算結果表示"
@@ -21,24 +21,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
+        android:onClick="tapCalculationButton"
         android:text="計算結果"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView" />
 
     <Spinner
-        android:id="@+id/operator_spinner"
+        android:id="@+id/spinner"
         android:layout_width="106dp"
         android:layout_height="41dp"
         android:layout_marginBottom="52dp"
         android:entries="@array/operation_symbols"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/num1"
         android:layout_width="106dp"
         android:layout_height="41dp"
         android:layout_marginEnd="28dp"
@@ -46,11 +47,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="値"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/operator_spinner" />
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toStartOf="@+id/spinner" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/num2"
         android:layout_width="106dp"
         android:layout_height="41dp"
         android:layout_marginStart="28dp"
@@ -58,7 +59,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="値"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/operator_spinner" />
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintStart_toEndOf="@+id/spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

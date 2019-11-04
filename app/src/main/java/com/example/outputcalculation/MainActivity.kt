@@ -1,7 +1,13 @@
 package com.example.outputcalculation
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val num2Str = (findViewById<EditText>(R.id.num2)).text.toString()
         val symbolStr = (findViewById<Spinner>(R.id.spinner)).selectedItem.toString()
         val result = Calculator().execCalculation(num1Str, num2Str, symbolStr)
+        //TextView resultTextView = (TextView)findViewById(R.id.resultTextView);
         resultTextView.text = num1Str + symbolStr + num2Str + "=" + result.toString()
     }
 }
