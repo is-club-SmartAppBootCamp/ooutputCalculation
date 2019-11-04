@@ -2,12 +2,13 @@ package com.example.outputcalculation
 
 class Calculator {
 
-    /*
-    計算を行うメソッド
-     引き数：画面に入力された値１、２、四則演算
-     戻り値：計算結果
+    /**
+     * 計算を行うメソッド
+     * @param num1Str 値１
+     * @param num1Str 値２
+     * @param num1Str 四則演算子
+     * @return 計算結果
      */
-
     fun execCalculation(x: String, y: String, A: String): Int {
         //戻り値の初期化
         var result = 0
@@ -19,7 +20,6 @@ class Calculator {
         //演算子の種類によって計算を行う
         if(A == "+"){
             result = num1 + num2
-
         }else if(A == "-"){
             result = num1 - num2
         }else if(A == "*"){
