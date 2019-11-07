@@ -4,9 +4,6 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,12 +16,16 @@ class MainActivity : AppCompatActivity() {
     // Sendボタン押下時
     @SuppressLint("SetTextI18n")
     fun tapCalculationButton(view: View) {
-        // 計算処理を行う
-        val num1Str = (findViewById<EditText>(R.id.num1)).text.toString()
-        val num2Str = (findViewById<EditText>(R.id.num2)).text.toString()
-        val symbolStr = (findViewById<Spinner>(R.id.spinner)).selectedItem.toString()
+
+        // 入力値の取得
+        val num1Str = num1.text.toString()
+        val num2Str = num2.text.toString()
+        val symbolStr = spinner.selectedItem.toString()
+
+        //入力値の計算結果を取得
         val result = Calculator().execCalculation(num1Str, num2Str, symbolStr)
-        //TextView resultTextView = (TextView)findViewById(R.id.resultTextView);
+
+        //計算結果を画面に表示
         resultTextView.text = num1Str + symbolStr + num2Str + "=" + result.toString()
     }
 }
