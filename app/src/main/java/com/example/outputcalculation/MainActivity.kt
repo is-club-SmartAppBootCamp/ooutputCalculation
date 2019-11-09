@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         val num2Str = num2.text.toString()
         val symbolStr = spinner.selectedItem.toString()
 
-        //入力値の計算結果を取得
+        // 入力値の計算結果を取得
         val result = Calculator().execCalculation(num1Str, num2Str, symbolStr)
 
-        //計算結果を画面に表示
+        // 計算結果を画面に表示
         resultTextView.text = num1Str + symbolStr + num2Str + "=" + result.toString()
     }
 }

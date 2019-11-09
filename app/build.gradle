@@ -22,7 +22,6 @@ android {
     }
 }
 
-//画面の部品をID名で取得するため追加
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
